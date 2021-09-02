@@ -18,7 +18,7 @@ main {
 }
 
 .container {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 2em 0;
 }
@@ -82,7 +82,7 @@ button:hover {
   background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 1.5em;
+  padding: 2em 1.5em;
   margin: 0 auto 3em auto;
   max-width: 328px;
   border-radius: 12px;
@@ -92,11 +92,13 @@ button:hover {
 .temperatures {
   line-height: 1;
   width: 60%;
+  margin-left: 0.75em;
 }
 
 .current-temperature {
   font-size: 4rem;
   font-weight: 700;
+  margin-left: -12px;
 }
 
 .feels-like-temperature {
@@ -111,6 +113,10 @@ button:hover {
 
 .minmax-temperature p {
   margin-right: 0.75em;
+}
+
+.minmax-temperature i {
+  margin-right: 0.25em;
 }
 
 .overcast-container {
@@ -136,4 +142,8 @@ button:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
+}
+
+.weather-detail-title {
+  font-weight: 500;
 }
