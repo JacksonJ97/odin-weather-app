@@ -5,11 +5,11 @@ const processData = (data) => {
   const city = data.name;
   const country = data.sys.country;
   const main = data.weather[0].main;
+  const weatherIcon = data.weather[0].icon;
   const temp = convertToCelsius(data.main.temp);
   const minTemp = convertToCelsius(data.main.temp_min);
   const maxTemp = convertToCelsius(data.main.temp_max);
   const feelsLike = convertToCelsius(data.main.feels_like);
-  const description = capitalizeFirstLetter(data.weather[0].description);
   const humidity = data.main.humidity;
   const windSpeed = convertToKPH(data.wind.speed);
   const pressure = data.main.pressure;
@@ -17,6 +17,8 @@ const processData = (data) => {
   const weatherData = {
     city: city,
     country: country,
+    main: main,
+    weatherIcon: weatherIcon,
     temp: temp,
     minTemp: minTemp,
     maxTemp: maxTemp,
@@ -24,8 +26,6 @@ const processData = (data) => {
     humidity: humidity,
     windSpeed: windSpeed,
     pressure: pressure,
-    description: description,
-    main: main,
   };
 
   return weatherData;
@@ -40,7 +40,7 @@ const getWeather = async (city) => {
     const weatherData = processData(data);
 
     displayData(weatherData);
-    console.log(weatherData);
+    // console.log(weatherData);
   } catch (error) {
     console.log("Error: ", error);
   }
