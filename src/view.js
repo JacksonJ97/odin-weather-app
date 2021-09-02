@@ -13,7 +13,7 @@ export const displayData = (data) => {
   location.textContent = `${data.city}, ${data.country}`;
   mainWeather.textContent = `${data.main}`;
   currentTemp.textContent = `${data.temp}\xB0C`;
-  weatherIcon.src = `http://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`;
   feelsLikeTemp.textContent = `Feels like: ${data.feelsLike}\xB0C`;
   maxTemp.innerHTML = `<i class="fas fa-angle-up"></i>`;
   maxTemp.innerHTML += ` ${data.maxTemp}\xB0C`;
