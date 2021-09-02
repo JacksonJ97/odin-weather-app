@@ -5,13 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/weather-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/2204d85ae9.js" crossorigin="anonymous"></script>
     <title>Weather App</title>
   </head>
   <body>
-    <input type="text" id="search-input" placeholder="City" />
-    <button type="submit">Search</button>
-    <div class="container"></div>
+    <main>
+      <div class="container">
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="City" />
+          <button type="submit">Search</button>
+        </div>
+
+        <div class="main-details-container">
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Toronto</p>
+          </div> 
+
+          <div class="main-forecast">
+            <p>Clear</p>
+          </div>
+        </div>
+
+        <div class="current-weather-container">
+          <div>
+            <div class="current-temperature">
+              <p>16</p>
+              <p>&#176 C</p>
+            </div>
+  
+            <div class="feels-like-temperature">
+              <p>Feels like: 14</p>
+              <p>&#176 C</p>
+            </div>   
+  
+            <div class="minmax-temperature">
+              <p>H: 18&#176 C</p>
+              <p>L: 12&#176 C</p>
+            </div>
+          </div>
+          
+          <div class="overcast-container">
+            <i class="fas fa-cloud"></i>
+            <p>Clear sky</p>
+          </div>
+        </div>
+
+        <div class="weather-details-container">
+          <div class="weather-detail">
+            <p>Humidity</p>
+            <p>12%</p>
+          </div>
+        </div>
+
+        <div class="weather-detail">
+          <p>Wind speed</p>
+          <p>3.6 km/h</p>
+        </div>
+
+        <div class="weather-detail">
+          <p>Wind gust</p>
+          <p>8.6 km/h</p>
+        </div>
+
+        <div class="weather-detail">
+          <p>Sunrise</p>
+          <p>6:00 am</p>
+        </div>
+
+        <div class="weather-detail">
+          <p>Sunset</p>
+          <p>9:00 pm</p>
+        </div>
+
+        <div class="weather-detail">
+          <p>Pressure</p>
+          <p>1000 hPa</p>
+        </div>
+      </div>
+    </main>
   </body>
   <script src="main.js"></script>
 </html>

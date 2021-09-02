@@ -5,5 +5,87 @@
 }
 
 body {
-  background-color: beige;
+  font-family: "Yantramanav", sans-serif;
+  background-color: #f7f7f7;
+  color: #263144;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.main-details-container {
+  /* display: flex;
+  justify-content: center; */
+  margin-bottom: 2em;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location p {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 0.5em;
+}
+
+.main-forecast {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.forecast-description {
+  display: flex;
+  justify-content: center;
+}
+
+.current-weather-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.3);
+}
+
+.current-temperature {
+  display: flex;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.feels-like-temperature {
+  display: flex;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.minmax-temperature {
+  display: flex;
+  justify-content: space-between;
+  width: 115px;
+  font-weight: 500;
+}
+
+.overcast-container {
+  align-self: center;
+}
+
+.weather-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }
