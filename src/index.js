@@ -1,10 +1,13 @@
 import getWeather from "./weatherData";
 
 const city = document.getElementById("search-input");
-const searchBtn = document.querySelector("button");
+const searchForm = document.querySelector("form");
 
 getWeather("Toronto");
 
-searchBtn.addEventListener("click", () => {
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   getWeather(city.value);
+  city.blur();
+  searchForm.reset();
 });

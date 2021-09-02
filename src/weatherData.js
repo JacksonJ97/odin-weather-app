@@ -1,4 +1,4 @@
-import { convertToCelsius, convertToKPH, capitalizeFirstLetter } from "./helper";
+import { convertToCelsius, convertToKPH } from "./helper";
 import { displayData } from "./view";
 
 const processData = (data) => {
