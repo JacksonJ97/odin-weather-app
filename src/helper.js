@@ -7,3 +7,7 @@ export const convertToKPH = (speed) => {
   const KPH = speed * 3.6;
   return KPH.toFixed(1);
 };
+
+export const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};

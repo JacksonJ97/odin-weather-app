@@ -1,28 +1,32 @@
-import { convertToCelsius, convertToKPH } from "./helper";
+import { convertToCelsius, convertToKPH, capitalizeFirstLetter } from "./helper";
+import { displayData } from "./view";
 
 const processData = (data) => {
+  const city = data.name;
+  const country = data.sys.country;
+  const main = data.weather[0].main;
   const temp = convertToCelsius(data.main.temp);
   const minTemp = convertToCelsius(data.main.temp_min);
   const maxTemp = convertToCelsius(data.main.temp_max);
   const feelsLike = convertToCelsius(data.main.feels_like);
+  const description = capitalizeFirstLetter(data.weather[0].description);
   const humidity = data.main.humidity;
   const windSpeed = convertToKPH(data.wind.speed);
+  const pressure = data.main.pressure;
 
   const weatherData = {
+    city: city,
+    country: country,
     temp: temp,
     minTemp: minTemp,
     maxTemp: maxTemp,
     feelsLike: feelsLike,
     humidity: humidity,
     windSpeed: windSpeed,
+    pressure: pressure,
+    description: description,
+    main: main,
   };
-
-  console.log(temp);
-  console.log(minTemp);
-  console.log(maxTemp);
-  console.log(feelsLike);
-  console.log(humidity);
-  console.log(windSpeed);
 
   return weatherData;
 };
@@ -35,9 +39,8 @@ const getWeather = async (city) => {
 
     const weatherData = processData(data);
 
+    displayData(weatherData);
     console.log(weatherData);
-
-    return weatherData;
   } catch (error) {
     console.log("Error: ", error);
   }
