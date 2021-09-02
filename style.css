@@ -22,8 +22,20 @@ body {
   margin-bottom: 2em;
 }
 
+input[type="text"] {
+  border: 1px solid #263144;
+  border-radius: 32px;
+  padding: 0.5em;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0.5em;
+}
+
 .main-details-container {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .location {
@@ -50,35 +62,52 @@ body {
 }
 
 .current-weather-container {
+  background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
-  margin-bottom: 2em;
+  padding: 1.5em;
+  margin-bottom: 3em;
   border-radius: 12px;
-  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+.temperatures {
+  line-height: 1;
+  width: 60%;
 }
 
 .current-temperature {
   display: flex;
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 .feels-like-temperature {
-  display: flex;
-  font-weight: 500;
   margin-bottom: 0.5em;
+  font-weight: 500;
 }
 
 .minmax-temperature {
   display: flex;
-  justify-content: space-between;
-  width: 115px;
   font-weight: 500;
 }
 
+.minmax-temperature p {
+  margin-right: 0.75em;
+}
+
 .overcast-container {
+  width: 40%;
   align-self: center;
+}
+
+.overcast-container img {
+  display: block;
+  margin: 0 auto;
+}
+
+.overcast-container p {
+  text-align: center;
 }
 
 .weather-detail {
