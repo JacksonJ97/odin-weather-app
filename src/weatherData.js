@@ -35,10 +35,9 @@ const getWeather = async (city) => {
   try {
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3eec4a468c10f276cf75929ef6076518`);
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     const weatherData = processData(data);
-
     displayData(weatherData);
     // console.log(weatherData);
   } catch (error) {
