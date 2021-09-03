@@ -1,10 +1,11 @@
-import { convertToCelsius, convertToKPH, convertUnixTime } from "./helper";
+import { convertToCelsius, convertToKPH, convertUnixTime, getDate } from "./helper";
 import { displayData } from "./view";
 
 const processData = (data) => {
   const city = data.name;
   const country = data.sys.country;
   const main = data.weather[0].main;
+  const date = getDate(data.timezone);
   const weatherIcon = data.weather[0].icon;
   const temp = convertToCelsius(data.main.temp);
   const minTemp = convertToCelsius(data.main.temp_min);
@@ -20,6 +21,7 @@ const processData = (data) => {
     city: city,
     country: country,
     main: main,
+    date: date,
     weatherIcon: weatherIcon,
     temp: temp,
     minTemp: minTemp,
@@ -38,13 +40,13 @@ const processData = (data) => {
 const getWeather = async (city) => {
   try {
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3eec4a468c10f276cf75929ef6076518`);
+    if (!response.ok) throw new Error(`City not found`);
     let data = await response.json();
-    console.log(data);
 
     const weatherData = processData(data);
     displayData(weatherData);
   } catch (error) {
-    console.log("Error: ", error);
+    alert(error);
   }
 };
 

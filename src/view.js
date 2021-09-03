@@ -1,6 +1,7 @@
 export const displayData = (data) => {
   const location = document.getElementById("location");
   const mainWeather = document.getElementById("main-weather");
+  const date = document.getElementById("date");
   const weatherIcon = document.getElementById("weather-icon");
   const currentTemp = document.getElementById("current-temp");
   const feelsLikeTemp = document.getElementById("feels-like-temp");
@@ -14,6 +15,7 @@ export const displayData = (data) => {
 
   location.textContent = `${data.city}, ${data.country}`;
   mainWeather.textContent = `${data.main}`;
+  date.textContent = `${data.date}`;
   currentTemp.textContent = `${data.temp}\xB0C`;
   weatherIcon.src = `https://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`;
   feelsLikeTemp.textContent = `Feels like: ${data.feelsLike}\xB0C`;

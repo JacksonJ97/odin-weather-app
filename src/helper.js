@@ -1,3 +1,5 @@
+import format from "date-fns/format";
+
 export const convertToCelsius = (kelvin) => {
   const celsius = Math.round(kelvin - 273.15);
   return celsius;
@@ -25,4 +27,13 @@ export const convertUnixTime = (timestamp, timezone) => {
   const formattedTime = hours.substr(-2) + ":" + minutes.substr(-2);
 
   return formattedTime;
+};
+
+export const getDate = (timezone) => {
+  const date = new Date();
+  const formattedDate = format(date, "PPPP");
+
+  console.log(date);
+
+  return formattedDate;
 };
