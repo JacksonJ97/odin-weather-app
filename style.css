@@ -92,7 +92,6 @@ button:hover {
 
 .temperatures {
   line-height: 1;
-  width: 60%;
   margin-left: 0.75em;
 }
 
@@ -120,7 +119,6 @@ button:hover {
 }
 
 .overcast-container {
-  width: 40%;
   align-self: center;
 }
 
@@ -146,4 +144,39 @@ button:hover {
 
 .weather-detail-title {
   font-weight: 500;
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.25rem;
+  }
+  .search-form {
+    max-width: 600px;
+  }
+
+  .main-details-container {
+    max-width: 600px;
+    margin: 0 auto 3em auto;
+  }
+
+  .location {
+    font-size: 1.5rem;
+  }
+
+  .location p {
+    font-size: 3rem;
+  }
+
+  .current-weather-container {
+    max-width: 420px;
+    justify-content: center;
+  }
+
+  .temperatures {
+    width: 50%;
+  }
+
+  .weather-details-container {
+    max-width: 480px;
+  }
 }
