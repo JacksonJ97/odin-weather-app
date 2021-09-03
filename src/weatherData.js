@@ -5,7 +5,7 @@ const processData = (data) => {
   const city = data.name;
   const country = data.sys.country;
   const main = data.weather[0].main;
-  const date = getDate(data.timezone);
+  const date = getDate(data.dt, data.timezone);
   const weatherIcon = data.weather[0].icon;
   const temp = convertToCelsius(data.main.temp);
   const minTemp = convertToCelsius(data.main.temp_min);

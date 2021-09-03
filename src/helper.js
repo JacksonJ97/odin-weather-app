@@ -29,11 +29,21 @@ export const convertUnixTime = (timestamp, timezone) => {
   return formattedTime;
 };
 
-export const getDate = (timezone) => {
-  const date = new Date();
-  const formattedDate = format(date, "PPPP");
+export const getDate = (timestamp, timezone) => {
+  // Find local time of city
+  const date = new Date(timestamp * 1000);
+  const localTime = date.getTime();
+  const localOffset = date.getTimezoneOffset() * 60000;
+  const utc = localTime + localOffset;
 
-  console.log(date);
+  // Find local time of searched city
+  const cityTime = utc + timezone * 1000;
+  const cityDate = new Date(cityTime);
+
+  // Format date
+  const formattedDate = format(cityDate, "PPPP");
+
+  console.log(cityDate);
 
   return formattedDate;
 };
