@@ -99,7 +99,6 @@ button:hover {
 .current-temperature {
   font-size: 4rem;
   font-weight: 700;
-  margin-left: -12px;
 }
 
 .feels-like-temperature {
