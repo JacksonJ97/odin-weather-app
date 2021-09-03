@@ -73,9 +73,10 @@ button:hover {
   font-weight: 500;
 }
 
-.forecast-description {
+.date-container {
   display: flex;
   justify-content: center;
+  font-weight: 500;
 }
 
 .current-weather-container {
