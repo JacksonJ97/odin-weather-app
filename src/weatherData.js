@@ -1,4 +1,4 @@
-import { convertToCelsius, convertToKPH } from "./helper";
+import { convertToCelsius, convertToKPH, convertUnixTime } from "./helper";
 import { displayData } from "./view";
 
 const processData = (data) => {
@@ -12,6 +12,8 @@ const processData = (data) => {
   const feelsLike = convertToCelsius(data.main.feels_like);
   const humidity = data.main.humidity;
   const windSpeed = convertToKPH(data.wind.speed);
+  const sunrise = convertUnixTime(data.sys.sunrise, data.timezone);
+  const sunset = convertUnixTime(data.sys.sunset, data.timezone);
   const pressure = data.main.pressure;
 
   const weatherData = {
@@ -25,6 +27,8 @@ const processData = (data) => {
     feelsLike: feelsLike,
     humidity: humidity,
     windSpeed: windSpeed,
+    sunrise: sunrise,
+    sunset: sunset,
     pressure: pressure,
   };
 
@@ -35,11 +39,10 @@ const getWeather = async (city) => {
   try {
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3eec4a468c10f276cf75929ef6076518`);
     let data = await response.json();
-    // console.log(data);
+    console.log(data);
 
     const weatherData = processData(data);
     displayData(weatherData);
-    // console.log(weatherData);
   } catch (error) {
     console.log("Error: ", error);
   }

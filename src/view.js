@@ -8,6 +8,8 @@ export const displayData = (data) => {
   const minTemp = document.getElementById("low-temp");
   const humidity = document.getElementById("humidity");
   const windSpeed = document.getElementById("wind-speed");
+  const sunrise = document.getElementById("sunrise");
+  const sunset = document.getElementById("sunset");
   const pressure = document.getElementById("pressure");
 
   location.textContent = `${data.city}, ${data.country}`;
@@ -21,5 +23,7 @@ export const displayData = (data) => {
   minTemp.innerHTML += ` ${data.minTemp}\xB0C`;
   humidity.textContent = `${data.humidity}%`;
   windSpeed.textContent = `${data.windSpeed} km/h`;
+  sunrise.textContent = `${data.sunrise}`;
+  sunset.textContent = `${data.sunset}`;
   pressure.textContent = `${data.pressure} hPa`;
 };
