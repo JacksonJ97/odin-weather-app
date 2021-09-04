@@ -51,7 +51,6 @@ const getWeather = async (city, units) => {
     if (!response.ok) throw new Error(`City not found`);
     let data = await response.json();
 
-    // console.log(data);
     const weatherData = processData(data, units);
     displayData(weatherData, units);
   } catch (error) {

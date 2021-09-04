@@ -23,11 +23,9 @@ toggleBtn.addEventListener("click", async () => {
 
   if (!imperial) {
     imperial = true;
-    console.log(1);
     units = "imperial";
   } else if (imperial) {
     imperial = false;
-    console.log(2);
     units = "metric";
   }
 
