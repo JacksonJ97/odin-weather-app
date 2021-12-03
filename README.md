@@ -18,4 +18,4 @@ In this project, I learned how to consume an API by using async/await and use th
 
 ### Live URL
 
-https://jacksonj97.github.io/odin-weather-app/
+https://jacksonj97.github.io/weather-app/
