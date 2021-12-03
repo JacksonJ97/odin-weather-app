@@ -1,6 +1,6 @@
 # Weather App
 
-Weather app built using HTML, CSS, and JS. Users input a city in the search bar and the corresponding data from the Open Weather API was displayed. An API function was used to get data from the Open Weather API. The data obtained and displayed were the city temperatures, current weather, wind speed, etc. A toggle button function was implemented to change the units to either metric or imperial.
+Weather app built using HTML, CSS, and JS. Users input a city into the search bar and the corresponding data from the Open Weather API was displayed. An API function was used to get data from the Open Weather API. The data obtained and displayed were the city temperatures, current weather, wind speed, etc. A toggle button function was implemented to change the units to either metric or imperial.
 
 ## My process
 
